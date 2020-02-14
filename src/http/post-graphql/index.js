@@ -5,18 +5,12 @@ var typeDefs = `
   type Query {
     hello(name: String = "World"): String
   }
-  type Mutation {
-    hello(name: String = "World"): String
-  }
 `
 
 const hello = (_, { name }) => `Hello ${name}!`
 
 const resolvers = {
   Query: {
-    hello
-  },
-  Mutation: {
     hello
   }
 }
