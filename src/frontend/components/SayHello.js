@@ -30,7 +30,7 @@ export default ({ name = 'World' }) => {
   const [value, setValue] = useState(name)
   return (
     <>
-      <label htmlFor='name'>Your Name:</label>
+      <label htmlFor='name'>Your Name: </label>
       <input name='name' type='text' onChange={e => setValue(e.target.value)} value={value} />
       <SayHello name={value} />
     </>

@@ -11,7 +11,7 @@ It has a simple graphql server & playground (http://0.0.0.0:8080/graphql), and d
 ```
 npm i          # install local tools
 npm start      # start a hot-reloading local development server
-npm run deploy # dpeloy on lambda
+npm run deploy # deploy as arc app on AWS
 ```
 
 It's not true SSR, in that it pre-renders the HTML from JSX, but in many cases this is fine, and it's much faster & lighter, and has most of the same SEO benefits.
