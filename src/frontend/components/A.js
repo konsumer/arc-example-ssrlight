@@ -4,9 +4,9 @@ import { A, usePath } from 'hookrouter'
 
 export default ({ href, className = '', activeClass = 'active', ...rest }) => {
   const path = usePath()
-  let c = className
+  const c = className.split(' ')
   if (path === href) {
-    c += ` ${activeClass}`
+    c.push(activeClass)
   }
-  return <A href={href} className={c} {...rest} />
+  return <A href={href} className={c.join(' ')} {...rest} />
 }
