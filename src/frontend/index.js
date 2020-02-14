@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import { useRoutes } from 'hookrouter'
+import { useRoutes, A } from 'hookrouter'
 
 import './style.css'
 import pages from './pages/**/*.js'
@@ -28,8 +28,8 @@ const App = () => (
     <header>
       <h1>Arc SSR Light</h1>
       <nav>
-        <a href='/'>home</a>
-        <a href='/about'>about</a>
+        <A href='/'>home</A>
+        <A href='/about'>about</A>
       </nav>
     </header>
     <Router />
