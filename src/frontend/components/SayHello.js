@@ -7,6 +7,7 @@ query SAY_HELLO($name: String!){
 }
 `
 
+// this does the actual query and returns content for loading/error/success
 const SayHello = ({ name }) => {
   const [{ data, fetching, error }] = useQuery({
     query: SAY_HELLO,
@@ -24,6 +25,7 @@ const SayHello = ({ name }) => {
   return <pre>{JSON.stringify(data, null, 2)}</pre>
 }
 
+// this is just a wrapper that tracks an input
 export default ({ name = 'World' }) => {
   const [value, setValue] = useState(name)
   return (
