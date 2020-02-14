@@ -6,11 +6,11 @@ import { useRoutes } from 'hookrouter'
 
 import './style.css'
 import pages from './pages/**/*.js'
+const IndexPage = pages.index.default
+const NotFoundPage = pages['404'].default
 
 // this builds the router from files in pages/*.js
 const Router = () => {
-  const IndexPage = pages.index
-  const NotFoundPage = pages['404']
   const routes = { '/': () => <IndexPage /> }
   Object.keys(pages).forEach(p => {
     if (p !== 'index' && p !== '404') {
