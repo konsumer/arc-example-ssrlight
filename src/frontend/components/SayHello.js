@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from 'urql'
+import { DebounceInput } from 'react-debounce-input'
 
 const SAY_HELLO = `
 query SAY_HELLO($name: String!){
@@ -31,7 +32,13 @@ export default ({ name = 'World' }) => {
   return (
     <>
       <label htmlFor='name'>Your Name: </label>
-      <input name='name' type='text' onChange={e => setValue(e.target.value)} value={value} />
+      <DebounceInput
+        id='name'
+        minLength={1}
+        debounceTimeout={300}
+        onChange={e => setValue(e.target.value)}
+        value={value}
+      />
       <SayHello name={value} />
     </>
   )
