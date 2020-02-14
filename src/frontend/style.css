@@ -30,6 +30,11 @@ header h1 {
 
 nav > a {
   margin-right: 5px;
+  text-decoration: none;
+  color: black;
+}
+nav > a.active {
+  text-decoration: underline;
 }
 
 code {

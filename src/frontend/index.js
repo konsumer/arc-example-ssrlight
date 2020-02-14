@@ -2,9 +2,10 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import { useRoutes, A } from 'hookrouter'
+import { useRoutes } from 'hookrouter'
 
 import './style.css'
+import A from './components/A'
 import pages from './pages/**/*.js'
 const IndexPage = pages.index.default
 const NotFoundPage = pages['404'].default
